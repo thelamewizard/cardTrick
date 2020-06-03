@@ -189,7 +189,7 @@ def displayit(fulldeck):
     while True:
             
         for event in pygame.event.get():
-            if len(chosen)!=15:
+            if len(chosen)==15:
                 button(280,200,200,40,YELLOW,(255, 0, 175),'READY!!',16,got15)
             else:
                 button(250,450,250,40,YELLOW,(255, 0, 175),'15 random cards!',16,getrandom15)
