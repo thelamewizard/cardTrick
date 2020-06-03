@@ -78,14 +78,14 @@ class splitdeck:
         global counter
         global chosen
         chosen = []
+        gameDisplay.blit(back_ground,(0,0))
+
         while counter==3:
-            gameDisplay.blit(back_ground,(0,0))
             cardpile[7].showcard(365,200)
             message_display('This was your card!',400,150,20,color=BLACK)
 
             button(450,350,100,40,YELLOW,(255, 0, 175),'Quit',16,pygame.quit)
             button(250,350,100,40,YELLOW,(255, 0, 175),'Replay',16,replay)
-
             pygame.display.flip()
             for event in pygame.event.get():
               
@@ -95,8 +95,6 @@ class splitdeck:
             
        
         counter+=1
-    
-        gameDisplay.blit(back_ground,(0,0))
         # for card in cardpile:
             # card.showval()
         self.firstpile = []
@@ -190,7 +188,7 @@ def displayit(fulldeck):
             
         for event in pygame.event.get():
             if len(chosen)==15:
-                button(280,200,200,40,YELLOW,(255, 0, 175),'READY!!',16,got15)
+                button(280,350,200,40,YELLOW,(255, 0, 175),'READY!!',16,got15)
             else:
                 button(250,450,250,40,YELLOW,(255, 0, 175),'15 random cards!',16,getrandom15)
     
@@ -246,7 +244,6 @@ def replay():
     
     
 
-tdeck=deck()
 # while True:
 replay()
     
